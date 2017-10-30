@@ -21,10 +21,6 @@ module.exports = function(config) {
         // Preprocess matching files before serving them to the browser.
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            // Source files, that you wanna generate coverage for
-            // (these files will be instrumented by Istanbul).
-            'src/**/*.js': ['coverage'],
-
             // Test files.
             'test/index.js': ['webpack']
         },

@@ -1,3 +1,5 @@
+var path = require('path');
+
 // Webpack configuration.
 const config = {
     resolve: {
@@ -35,8 +37,8 @@ const config = {
                 ]
             },
             {
-                test: /\.js$|\.ts$/,
-                exclude: /node_modules/,
+                test: /\.(js|ts)$/,
+                include: path.resolve('src'),
                 use: [{ loader: 'istanbul-instrumenter-loader' }],
                 // Delays coverage after all tests are run, fixing transpiled source coverage error.
                 enforce: 'post'
